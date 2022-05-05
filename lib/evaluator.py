@@ -12,7 +12,7 @@ from .utils import to_torch
 
 def extract_cnn_feature(model, inputs, output_feature=None):
     model.eval()
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     with torch.no_grad():
         inputs = to_torch(inputs)
         inputs = inputs.to(device)

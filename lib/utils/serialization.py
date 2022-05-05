@@ -11,7 +11,7 @@ def save_checkpoint(state, fpath='checkpoint.pth.tar'):
 
 def load_checkpoint(fpath):
     if osp.isfile(fpath):
-        checkpoint = torch.load(fpath)
+        checkpoint = torch.load(fpath, map_location="cuda:0")
         print("=> Loaded checkpoint '{}'".format(fpath))
         return checkpoint
     else:

@@ -3,19 +3,19 @@ from glob import glob
 import re
 import pdb
 class DataSet(object):
-    def __init__(self, data_dir, name='veri776', info=True):
+    def __init__(self, data_dir, name='veri-wild', info=True):
         self.name = name
         self.images_dir = osp.join(data_dir, name)
-        self.train_path = 'bounding_box_train'
+        self.train_path = '/content/gdrive/Computers/MacBookPro_Work/veri_wild/bounding_box_train'
         #self.train_path = 'train'
-        self.query_path = 'query' # for test-10000 dataset (large)
-        self.gallery_path = 'bounding_box_test' #if u use 'veri-wild dataset, it's automatically defined by test-10000 protocol'
+        self.query_path = '/content/gdrive/Computers/MacBookPro_Work/veri_wild/query' # for test-10000 dataset (large)
+        self.gallery_path = '/content/gdrive/Computers/MacBookPro_Work/veri_wild/bounding_box_test' #if u use 'veri-wild dataset, it's automatically defined by test-10000 protocol'
         if self.name=='veri-wild':
-            self.train_path = 'train_set'
-            self.small_query_path = 'query_small'
-            self.small_gallery_path = 'test_small'
-            self.middle_query_path = 'query_middle'
-            self.middle_gallery_path = 'test_middle'
+            self.train_path = '/content/gdrive/Computers/MacBookPro_Work/veri_wild/train_set'
+            self.small_query_path = '/content/gdrive/Computers/MacBookPro_Work/veri_wild/query_small'
+            self.small_gallery_path = '/content/gdrive/Computers/MacBookPro_Work/veri_wild/test_small'
+            self.middle_query_path = '/content/gdrive/Computers/MacBookPro_Work/veri_wild/query_middle'
+            self.middle_gallery_path = '/content/gdrive/Computers/MacBookPro_Work/veri_wild/test_middle'
             
             self.query_small, self.gallery_small, self.query_middle, self.gallery_middle = [],[],[],[]
             self.num_query_small_ids, self.num_gallery_small_ids,  self.num_query_middle_ids, self.num_gallery_middle_ids = 0, 0, 0, 0

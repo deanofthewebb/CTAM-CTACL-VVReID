@@ -5,7 +5,7 @@ from easydict import EasyDict as edict
 
 config = edict()
 
-config.CONFIG_NAME = ''
+config.CONFIG_NAME = 'veri-wild'
 config.OUTPUT_DIR = ''
 config.DATA_DIR = ''
 config.GPUS = '0'
@@ -45,8 +45,8 @@ config.MPLP.L = 20
 
 # DATASET related params
 config.DATASET = edict()
-config.DATASET.ROOT = ''
-config.DATASET.DATASET = 'market'
+config.DATASET.ROOT = 'data'
+config.DATASET.DATASET = 'veri-wild'
 config.DATASET.DATA_FORMAT = 'png'
 config.DATASET.CAM_NUM = 20
 # training data augmentation
@@ -67,7 +67,7 @@ config.TRAIN.BEGIN_EPOCH = 0
 config.TRAIN.END_EPOCH = 40
 
 config.TRAIN.RESUME = True
-config.TRAIN.CHECKPOINT = './output/as_gamma/market/1/checkpoint_28.pth.tar'
+config.TRAIN.CHECKPOINT = './learnt_models/veri-wild/checkpoint.pth.tar'
 
 config.TRAIN.BATCH_SIZE = 128
 config.TRAIN.SHUFFLE = True

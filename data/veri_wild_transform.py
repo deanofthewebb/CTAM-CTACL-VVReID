@@ -1,15 +1,15 @@
 import os
 import numpy as np
 
-train_file = './train_test_split/train_list.txt'
-test_small = './train_test_split/test_3000_id.txt'
-query_small = './train_test_split/test_3000_id_query.txt'
-test_middle = './train_test_split/test_5000_id.txt'
-query_middle = './train_test_split/test_5000_id_query.txt'
-test_large = './train_test_split/test_10000_id.txt'
-query_large = './train_test_split/test_10000_id_query.txt'
+train_file = '/Volumes/Samsung-SSD/veri_wild/train_test_split/train_list_start0.txt'
+test_small = '/Volumes/Samsung-SSD/veri_wild/train_test_split/test_3000_id.txt'
+query_small = '/Volumes/Samsung-SSD/veri_wild/train_test_split/test_3000_id_query.txt'
+test_middle = '/Volumes/Samsung-SSD/veri_wild/train_test_split/test_5000_id.txt'
+query_middle = '/Volumes/Samsung-SSD/veri_wild/train_test_split/test_5000_id_query.txt'
+test_large = '/Volumes/Samsung-SSD/veri_wild/train_test_split/test_10000_id.txt'
+query_large = '/Volumes/Samsung-SSD/veri_wild/train_test_split/test_10000_id_query.txt'
 
-input_img_path = './images/'
+input_img_path = '/Volumes/Samsung-SSD/veri_wild/images/'
 output_train_img_path =  './bounding_box_train/'
 output_test_img_path =  './bounding_box_test/'
 output_query_img_path = './query/'
